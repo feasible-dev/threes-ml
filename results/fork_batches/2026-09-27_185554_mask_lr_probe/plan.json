@@ -1,0 +1,32 @@
+{
+  "parent_run": "C:\\dev\\projects\\threes_ml\\results\\runs\\2026-09-27_125618_mask_lr_extension_masked_lr_00005",
+  "parent_checkpoint": "C:\\dev\\projects\\threes_ml\\results\\runs\\2026-09-27_125618_mask_lr_extension_masked_lr_00005\\models\\checkpoints\\step_000225026048",
+  "parent_steps": 225026048,
+  "parent_status": "complete",
+  "compatibility_issues": [],
+  "parent_type": "completed_mask_lr_fork",
+  "requested_additional_steps": 5000000,
+  "rounded_additional_steps": 5005312,
+  "endpoint_steps": 230031360,
+  "rollout_size": 8192,
+  "training_seed": 72,
+  "arms": {
+    "masked_lr_00005": {
+      "mask_training": true,
+      "effective_lr": 5e-05
+    },
+    "masked_lr_00010": {
+      "mask_training": true,
+      "effective_lr": 0.0001
+    }
+  },
+  "development_comparison": {
+    "games": 300,
+    "seed_start": 840000
+  },
+  "probe": "masked_lr_00005_vs_00010",
+  "parent_model_sha256": "4e3e1752e01b32757ccbe856a9f2f8d29d50c0e9bf71d9ee2426f81ca0ab170d",
+  "parent_runtime_sha256": "e5c03a2c599b7bb9e24b156a0a102f313f86c463f5e66683e4b16f1aac132878",
+  "group": "2026-09-27_185554_mask_lr_probe",
+  "created_at": "2026-09-27T18:55:55-04:00"
+}

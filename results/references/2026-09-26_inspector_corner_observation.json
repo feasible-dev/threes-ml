@@ -1,0 +1,19 @@
+{
+  "purpose": "Small descriptive observation, not a general corner-preference benchmark",
+  "model": "external_models/kiok/onnx_model.onnx",
+  "engine_revision": 2,
+  "device": "cpu",
+  "action_selection": "legal greedy",
+  "games": [
+    {"seed": 730100, "moves": 1388, "score": 261867, "maximum_tile": 3072, "completed": true},
+    {"seed": 730101, "moves": 1479, "score": 268611, "maximum_tile": 3072, "completed": true}
+  ],
+  "position_measurement": "Before each action, if maximum tile >=96; split unit weight equally between tied maximum tiles; normalize over sampled positions",
+  "maximum_position_share_by_row": [
+    [0, 0, 0, 0],
+    [0, 0, 0, 0],
+    [0.011644832605531296, 0.005822416302765648, 0.001091703056768559, 0],
+    [0.8568049490538574, 0.12463609898107715, 0, 0]
+  ],
+  "interpretation": "In these two games, large maximum tiles were predominantly on the bottom row, especially bottom-left. This does not establish universal behavior or its training cause."
+}

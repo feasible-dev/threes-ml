@@ -1,0 +1,28 @@
+{
+  "model": {
+    "net_arch": [
+      64,
+      64
+    ],
+    "activation": "ReLU"
+  },
+  "ppo": {
+    "n_steps": 512,
+    "batch_size": 128,
+    "n_epochs": 8,
+    "learning_rate": 0.0003,
+    "gamma": 0.995
+  },
+  "training": {
+    "seed": 52,
+    "train_steps": 300000
+  },
+  "evaluation": {
+    "eval_interval": 24576,
+    "eval_games": 100,
+    "eval_seed": 120000
+  },
+  "reward": {
+    "reward_id": "rank_weighted_merges_v1"
+  }
+}

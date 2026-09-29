@@ -1,0 +1,15 @@
+{
+  "question": "Do larger rollouts and more PPO passes improve seed 43 at the same transition budget?",
+  "insight": "Held-out mean 555.9, 38.3 points above its seed-matched control; tile-192 rate remains 2.0%. This is the strongest neural result in the batch, still below the position heuristic. Periodic evaluation and held-out evaluation differ substantially.",
+  "relevance": "high",
+  "retention": "complete",
+  "retention_reason": "Keep the final model, checkpoints, metrics, configuration, and source snapshot while examining update strength and longer training.",
+  "holdout": {
+    "file": "evaluation/holdout.csv",
+    "agent": "2026-09-26_133136_stronger_updates_s43"
+  },
+  "reference": {
+    "file": "evaluation/reference.csv",
+    "agent": "apparition"
+  }
+}

@@ -1,0 +1,15 @@
+{
+  "question": "Does 200,000-transition PPO improve on the prototype and catch up with the heuristics?",
+  "insight": "The final model beats random play but remains well below the position and expected-spawn heuristics. It also illustrates variation across training seeds.",
+  "relevance": "medium",
+  "retention": "trim later",
+  "retention_reason": "Keep the configuration, metrics, held-out scores, and at least the final model until the next comparison. The 26 checkpoints can be reviewed for cleanup.",
+  "holdout": {
+    "file": "evaluation/holdout.csv",
+    "agent": "ppo_200k_s42"
+  },
+  "reference": {
+    "file": "evaluation/reference.csv",
+    "agent": "apparition"
+  }
+}

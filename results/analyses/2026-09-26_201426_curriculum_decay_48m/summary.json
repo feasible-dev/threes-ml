@@ -1,0 +1,70 @@
+{
+  "run": "results\\runs\\2026-09-26_162446_recurrent_v2_curriculum_decay_s72",
+  "cutoff_steps": 48611328,
+  "metrics_snapshot_sha256": "ce4992104a8c60ec9fa4af02d587c842f194440747cf60bf439fc2e01441cfcf",
+  "evaluation_games": 100,
+  "evaluation_seed_range": [
+    700000,
+    700099
+  ],
+  "blocks": [
+    {
+      "from_m": 10,
+      "to_m": 15,
+      "evaluations": 11,
+      "mean": 1368.769090909091,
+      "mean_384_pct": 1.0909090909090908
+    },
+    {
+      "from_m": 15,
+      "to_m": 20,
+      "evaluations": 10,
+      "mean": 1896.483,
+      "mean_384_pct": 3.7
+    },
+    {
+      "from_m": 20,
+      "to_m": 25,
+      "evaluations": 10,
+      "mean": 2089.335,
+      "mean_384_pct": 4.3
+    },
+    {
+      "from_m": 25,
+      "to_m": 30,
+      "evaluations": 10,
+      "mean": 2360.976,
+      "mean_384_pct": 6.6000000000000005
+    },
+    {
+      "from_m": 30,
+      "to_m": 35,
+      "evaluations": 10,
+      "mean": 2441.268,
+      "mean_384_pct": 7.4
+    },
+    {
+      "from_m": 35,
+      "to_m": 40,
+      "evaluations": 10,
+      "mean": 2625.549,
+      "mean_384_pct": 9.6
+    },
+    {
+      "from_m": 40,
+      "to_m": 45,
+      "evaluations": 9,
+      "mean": 2576.3966666666665,
+      "mean_384_pct": 9.333333333333334
+    },
+    {
+      "from_m": 45,
+      "to_m": 48.611328,
+      "evaluations": 8,
+      "mean": 2725.1925,
+      "mean_384_pct": 9.875
+    }
+  ],
+  "best_steps": 37437440,
+  "best_mean": 3368.34
+}

@@ -1,0 +1,47 @@
+{
+  "schema": "recurrent_reproduction_v2",
+  "model": {
+    "hidden_size": 1024
+  },
+  "environment": {
+    "heuristic": true,
+    "snake_weight": 0,
+    "scaffold": 0.5,
+    "terminal_rank": 16,
+    "reward_scaler": 1,
+    "bootstrap_timeouts": false
+  },
+  "ppo": {
+    "n_envs": 128,
+    "n_steps": 64,
+    "batch_size": 2048,
+    "n_epochs": 4,
+    "learning_rate": 0.0003,
+    "gamma": 0.999,
+    "gae_lambda": 0.95,
+    "ent_coef": 0.01,
+    "clip_range": 0.2,
+    "vf_coef": 0.5,
+    "max_grad_norm": 0.5,
+    "target_kl": 0.03
+  },
+  "training": {
+    "seed": 76,
+    "steps": 8192,
+    "device": "cuda",
+    "torch_threads": 1,
+    "checkpoint_interval": 8192,
+    "lr_schedule": {
+      "milestones": [
+        4096
+      ],
+      "factor": 0.5
+    }
+  },
+  "evaluation": {
+    "games": 2,
+    "seed": 710100,
+    "interval": 8192,
+    "batch_size": 2
+  }
+}

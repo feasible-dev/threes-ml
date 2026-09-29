@@ -1,0 +1,102 @@
+{
+  "measured_at": "2026-09-28T18:11:52-04:00",
+  "inputs": {
+    "probe_parent_230m": {
+      "path": "C:\\dev\\projects\\threes_ml\\results\\runs\\2026-09-27_185554_mask_lr_probe_masked_lr_00010\\models\\checkpoints\\step_000230031360\\model.zip",
+      "sha256": "caa81d08c2e757b03dddc0b1f8c7f8f15b0260e1334518eec3f02a2011e882fc"
+    },
+    "fixed_endpoint_330m": {
+      "path": "C:\\dev\\projects\\threes_ml\\results\\runs\\2026-09-27_193437_masked_lr_00010_long_masked_lr_00010\\models\\checkpoints\\step_000330039296\\model.zip",
+      "sha256": "32f40303e885f0e3373d3db9b8e8c627932b586e1e63f36da89266c3118708e3"
+    },
+    "selected_best_307m": {
+      "path": "C:\\dev\\projects\\threes_ml\\results\\runs\\2026-09-27_193437_masked_lr_00010_long_masked_lr_00010\\models\\best.zip",
+      "sha256": "5666bcd91a7693e7dd94c23a129bc44cb7dbc30dc2e82fd1a7c41c6f90a0f037"
+    }
+  },
+  "metadata": {
+    "parent_run": "C:\\dev\\projects\\threes_ml\\results\\runs\\2026-09-27_193437_masked_lr_00010_long_masked_lr_00010",
+    "parent_steps": 330039296,
+    "engine_revision": 2
+  },
+  "games": 300,
+  "seed_start": 850000,
+  "seed_end": 850299,
+  "agents": {
+    "probe_parent_230m": {
+      "model": "C:\\dev\\projects\\threes_ml\\results\\runs\\2026-09-27_185554_mask_lr_probe_masked_lr_00010\\models\\checkpoints\\step_000230031360\\model.zip",
+      "games": 300,
+      "mean_score": 5972.02,
+      "median_score": 4342.5,
+      "mean_valid_moves": 227.13,
+      "mean_attempts": 227.13,
+      "reach_384": 0.43333333333333335,
+      "reach_3072": 0.0,
+      "reach_6144": 0.0,
+      "truncated": 0,
+      "reach_192": 0.8166666666666667,
+      "reach_768": 0.023333333333333334,
+      "reach_1536": 0.0
+    },
+    "fixed_endpoint_330m": {
+      "model": "C:\\dev\\projects\\threes_ml\\results\\runs\\2026-09-27_193437_masked_lr_00010_long_masked_lr_00010\\models\\checkpoints\\step_000330039296\\model.zip",
+      "games": 300,
+      "mean_score": 6502.42,
+      "median_score": 7173.0,
+      "mean_valid_moves": 236.74,
+      "mean_attempts": 236.74,
+      "reach_384": 0.5233333333333333,
+      "reach_3072": 0.0,
+      "reach_6144": 0.0,
+      "truncated": 0,
+      "reach_192": 0.8666666666666667,
+      "reach_768": 0.023333333333333334,
+      "reach_1536": 0.0
+    },
+    "selected_best_307m": {
+      "model": "C:\\dev\\projects\\threes_ml\\results\\runs\\2026-09-27_193437_masked_lr_00010_long_masked_lr_00010\\models\\best.zip",
+      "games": 300,
+      "mean_score": 6821.43,
+      "median_score": 7381.5,
+      "mean_valid_moves": 242.01666666666668,
+      "mean_attempts": 242.01666666666668,
+      "reach_384": 0.5266666666666666,
+      "reach_3072": 0.0,
+      "reach_6144": 0.0,
+      "truncated": 0,
+      "reach_192": 0.8766666666666667,
+      "reach_768": 0.03666666666666667,
+      "reach_1536": 0.0
+    }
+  },
+  "paired_comparisons": {
+    "330m_minus_230m": {
+      "games": 300,
+      "mean_score_difference": 530.4,
+      "median_paired_difference": 280.5,
+      "wins": 166,
+      "losses": 134,
+      "ties": 0,
+      "paired_bootstrap_95_percentile_interval": [
+        -142.16725,
+        1207.5232499999997
+      ],
+      "bootstrap_draws": 20000,
+      "bootstrap_seed": 850999
+    },
+    "selected_best_minus_330m": {
+      "games": 300,
+      "mean_score_difference": 319.01,
+      "median_paired_difference": 163.5,
+      "wins": 154,
+      "losses": 146,
+      "ties": 0,
+      "paired_bootstrap_95_percentile_interval": [
+        -373.45099999999996,
+        1038.213749999998
+      ],
+      "bootstrap_draws": 20000,
+      "bootstrap_seed": 851000
+    }
+  }
+}

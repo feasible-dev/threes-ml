@@ -1,0 +1,15 @@
+{
+  "question": "Does a 64-64 ReLU PPO policy with merge-depth reward outperform earlier PPO and heuristics?",
+  "insight": "Held-out mean 505.1 on 300 games; no game reached tile 384. The final tracking mean was 517.5 after 300,032 transitions. This is below the same-seed spawn heuristic (1,358.7) and prior stronger-updates seed 43 (560.6).",
+  "relevance": "medium",
+  "retention": "trim later",
+  "retention_reason": "Keep metrics, method, source snapshot, and held-out scores as the compact-network control; consider removing redundant periodic checkpoints during cleanup.",
+  "holdout": {
+    "file": "evaluation/holdout.csv",
+    "agent": "2026-09-26_142800_article_merge_64_s52"
+  },
+  "reference": {
+    "file": "evaluation/reference.csv",
+    "agent": "apparition"
+  }
+}

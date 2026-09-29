@@ -1,0 +1,15 @@
+{
+  "question": "Does widening the merge-depth policy from 64-64 to 256-256 help at training seed 52?",
+  "insight": "Held-out mean 502.5 on 300 games versus 505.1 for the 64-64 seed-52 policy; no game reached tile 384. The larger network did not improve this matched-seed comparison.",
+  "relevance": "medium",
+  "retention": "trim later",
+  "retention_reason": "Keep the exact configuration, learning curve, and scores for the width comparison; review redundant checkpoints later.",
+  "holdout": {
+    "file": "evaluation/holdout.csv",
+    "agent": "2026-09-26_142800_article_merge_256_s52"
+  },
+  "reference": {
+    "file": "evaluation/reference.csv",
+    "agent": "apparition"
+  }
+}

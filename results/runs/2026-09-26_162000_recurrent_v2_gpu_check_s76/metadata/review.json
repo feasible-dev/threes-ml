@@ -1,0 +1,5 @@
+{
+  "relevance": "high (engineering)",
+  "retention": "keep reports and selected model; intermediate checkpoints eligible for later cleanup",
+  "insight": "Engine-v2 CUDA smoke test: full 13,995,453-parameter network, curriculum, LR milestone at 4096, 8192 transitions then complete-state resume to 16384. LR remained 0.00015; curriculum appeared in 9% then 42% of actions. Two-game comparison verifies the reporting path only; it provides no playing-strength evidence. The CPU resume test checks exact next-update equality across an LR milestone."
+}

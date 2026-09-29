@@ -1,0 +1,138 @@
+{
+  "probed_at": "2026-09-26T22:00:10-04:00",
+  "checkpoint": "C:\\dev\\projects\\threes_ml\\results\\runs\\2026-09-26_162446_recurrent_v2_curriculum_decay_s72\\models\\checkpoints\\step_000074235904",
+  "parent_steps": 74235904,
+  "device": "cpu",
+  "environments": 16,
+  "time_steps_per_environment": 256,
+  "transitions": 4096,
+  "sampling": "fresh stochastic actions from the first checkpointed environments; in-memory branch",
+  "groups": {
+    "natural": {
+      "attempts": 3097,
+      "invalid_probability_mass_sum": 1337.2393414184075,
+      "one_legal_states": 0,
+      "realized_reward": 296.9379572425678,
+      "invalid": 1336,
+      "valid": 1761,
+      "completed": 14,
+      "timeouts": 0,
+      "merge_reward_before_clipping": 362.6875,
+      "shaping_reward_before_clipping": 17.328789999999923,
+      "positive_reward_clipped": 1,
+      "invalid_fraction": 0.43138521149499515,
+      "mean_invalid_probability_mass": 0.4317853863152753,
+      "mean_reward_per_attempt": 0.0958792241661504,
+      "invalid_streaks": 102,
+      "max_invalid_streak": 224,
+      "mean_invalid_streak": 13.098039215686274,
+      "completed_streaks": 96,
+      "max_completed_streak": 86,
+      "right_censored_streaks": 6,
+      "longest_observed_segment": {
+        "observed_length": 224,
+        "slot": 5,
+        "first_observed_time_step": 32,
+        "last_observed_time_step": 255,
+        "left_censored_by_checkpoint": false,
+        "right_censored_by_probe_end": true,
+        "ending": "probe_end",
+        "legal_actions": [
+          false,
+          true,
+          true,
+          false
+        ],
+        "invalid_action_counts": [
+          219,
+          0,
+          0,
+          5
+        ],
+        "first_action_probabilities": [
+          0.9677061438560486,
+          4.3832676510646706e-07,
+          0.0008367672562599182,
+          0.031456541270017624
+        ],
+        "last_action_probabilities": [
+          0.9602492451667786,
+          1.0590629244688898e-06,
+          0.0036710971035063267,
+          0.03607858344912529
+        ]
+      },
+      "streak_histogram": {
+        "1": 33,
+        "2": 14,
+        "3": 5,
+        "8-15": 8,
+        "4-7": 19,
+        "16+": 23
+      }
+    },
+    "curriculum": {
+      "attempts": 999,
+      "invalid_probability_mass_sum": 243.22983413211477,
+      "one_legal_states": 0,
+      "realized_reward": 127.54023940581828,
+      "invalid": 249,
+      "valid": 750,
+      "completed": 11,
+      "timeouts": 0,
+      "merge_reward_before_clipping": 142.625,
+      "shaping_reward_before_clipping": 10.907789999999935,
+      "positive_reward_clipped": 1,
+      "invalid_fraction": 0.24924924924924924,
+      "mean_invalid_probability_mass": 0.24347330743955434,
+      "mean_reward_per_attempt": 0.1276679073131314,
+      "invalid_streaks": 52,
+      "max_invalid_streak": 50,
+      "mean_invalid_streak": 4.788461538461538,
+      "completed_streaks": 52,
+      "max_completed_streak": 50,
+      "right_censored_streaks": 0,
+      "longest_observed_segment": {
+        "observed_length": 50,
+        "slot": 13,
+        "first_observed_time_step": 34,
+        "last_observed_time_step": 83,
+        "left_censored_by_checkpoint": false,
+        "right_censored_by_probe_end": false,
+        "ending": "valid_action",
+        "legal_actions": [
+          false,
+          false,
+          true,
+          true
+        ],
+        "invalid_action_counts": [
+          50,
+          0,
+          0,
+          0
+        ],
+        "first_action_probabilities": [
+          0.9696850776672363,
+          9.765598952071741e-05,
+          0.029195712879300117,
+          0.0010215493384748697
+        ],
+        "last_action_probabilities": [
+          0.964469313621521,
+          0.00021962702157907188,
+          0.033971406519412994,
+          0.001339668408036232
+        ]
+      },
+      "streak_histogram": {
+        "1": 21,
+        "4-7": 11,
+        "16+": 4,
+        "3": 4,
+        "2": 10,
+        "8-15": 2
+      }
+    }
+  }
+}

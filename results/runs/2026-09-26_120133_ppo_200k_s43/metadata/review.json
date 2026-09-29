@@ -1,0 +1,15 @@
+{
+  "question": "Does the same PPO configuration produce a similar result with another training seed?",
+  "insight": "The best final neural model so far, but still below the expected-spawn heuristic. Its best intermediate evaluation occurred early and did not persist.",
+  "relevance": "high",
+  "retention": "complete",
+  "retention_reason": "Keep the final model, best intermediate checkpoint, configuration, and curves for subsequent controlled experiments.",
+  "holdout": {
+    "file": "evaluation/holdout.csv",
+    "agent": "ppo_200k_s43"
+  },
+  "reference": {
+    "file": "evaluation/reference.csv",
+    "agent": "apparition"
+  }
+}

@@ -1,0 +1,15 @@
+{
+  "question": "Is the 64-64 merge-depth policy result reproducible across training seeds?",
+  "insight": "Held-out mean 416.0 on 300 games, 89.1 below the seed-52 counterpart; no game reached tile 384. Tracking stayed near 473 points late in training. Mean policy entropy fell from about 1.27 to 0.03 nats, suggesting an almost deterministic policy without a clear late score gain.",
+  "relevance": "medium",
+  "retention": "trim later",
+  "retention_reason": "Keep per-game data and learning curves to document training-seed variability; periodic checkpoints are candidates for later cleanup.",
+  "holdout": {
+    "file": "evaluation/holdout.csv",
+    "agent": "2026-09-26_142800_article_merge_64_s53"
+  },
+  "reference": {
+    "file": "evaluation/reference.csv",
+    "agent": "apparition"
+  }
+}

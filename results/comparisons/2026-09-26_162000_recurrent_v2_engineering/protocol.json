@@ -1,0 +1,12 @@
+{
+  "engine_revision": 2,
+  "games": 2,
+  "seed": 710110,
+  "device": "cuda",
+  "terminal_rank": 16,
+  "rules": "reproduction.environment.NativeBatch",
+  "action_selection": "legal greedy",
+  "curriculum": false,
+  "purpose": "validation; final-test claims require a frozen protocol",
+  "environment_sha256": "c8db1269fa5ef0b4aaec8c998e6ea257aacf58d29bc8c72fac413335e9368ff7"
+}

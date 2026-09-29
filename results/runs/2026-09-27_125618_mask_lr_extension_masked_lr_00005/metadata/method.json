@@ -1,0 +1,26 @@
+{
+  "engine_revision": 2,
+  "method": "RecurrentPPO masking-by-LR fork, shared actor/critic gradients",
+  "initialization": "local random-weight checkpoint at 125,018,112 transitions",
+  "parameters": 13995453,
+  "device": "cuda",
+  "gpu": "NVIDIA GeForce RTX 3060",
+  "versions": {
+    "torch": "2.11.0+cu128",
+    "sb3_contrib": "2.9.0",
+    "numba": "0.67.0"
+  },
+  "architecture_source": "ONNX SHA256 63bff54b23de09801fb2bc77ca8856ed781c2abaa2efe896c3da15e5d810eff2",
+  "rule_source": "threes-web 9527295de72333c91592fff45e8ccbcabd6ba80d/threes.h",
+  "limitations": [
+    "SB3 recurrent PPO instead of PufferLib; final training hyperparameters unavailable",
+    "Independent native simulator; separate RNG and corrected optional curriculum initialization",
+    "Target success rate must be measured; architecture equivalence alone does not establish training replication"
+  ],
+  "fork": {
+    "parent_run": "2026-09-27_112611_mask_lr_extension_masked_lr_00005",
+    "parent_steps": 125018112,
+    "mask_training": true,
+    "effective_lr": 5e-05
+  }
+}

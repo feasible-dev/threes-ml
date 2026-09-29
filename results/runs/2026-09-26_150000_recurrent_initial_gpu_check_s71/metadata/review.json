@@ -1,0 +1,5 @@
+{
+  "relevance": "medium",
+  "retention": "trim later",
+  "insight": "Initial full-size CUDA integration and sequence-fusion throughput check only. Eight-game scores do not establish playing strength. This checkpoint format predates explicit recurrent-memory restoration and cannot be continued exactly. Superseded for continuation by the later recurrent_gpu_check run; retain engineering records and review bulky checkpoints during cleanup."
+}

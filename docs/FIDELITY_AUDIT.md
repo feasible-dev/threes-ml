@@ -1,0 +1,32 @@
+---
+status: reference
+updated: 2026-09-26T21:29:45-04:00
+scope: Fidelity audit - what matches the published agent?
+---
+
+# Fidelity audit: what matches the published agent?
+
+**Finding (September 26, 2026):** the released ONNX **inference computation** is reproduced numerically. The full training recipe and the C simulator's exact trajectories are not reproduced. Consequently, neither a shared architecture nor more runtime guarantees the reported playing strength.
+
+Sources audited: [the author's article](https://medium.com/@josiah-kiok/beating-threes-with-reinforcement-learning-ae074dd28a68), [the repository README](https://github.com/pseudonam-gc/threes-web), and its [`threes.h` at commit `9527295`](https://github.com/pseudonam-gc/threes-web/blob/9527295de72333c91592fff45e8ccbcabd6ba80d/threes.h). The released ONNX file has SHA-256 `63bff54b23de09801fb2bc77ca8856ed781c2abaa2efe896c3da15e5d810eff2`. The repository provides the C rule header and inference weights, but not the original training script and final hyperparameter configuration.
+
+| Question | What we verified | Boundary of that claim |
+| --- | --- | --- |
+| Same network? | Our 13,995,453-parameter encoder, shared 1,024-unit LSTM, GELU layers, policy head, and value head accept every released ONNX weight. Over 12 recurrent steps, including a memory reset, the maximum difference in logits, value, and states was below `4.4e-5` on CPU/GPU. See [numerical validation](../results/references/2026-09-26_152212_reproduction_validation.json). | This proves inference computation for the released checkpoint. It does not reveal the optimizer, initialization, gradient handling, or every training-time network setting. The repository's prose says 24 inputs, while its executable C/ONNX interface uses 21. |
+| Same core game rules? | Our independent simulator follows the C header's one-cell movement and merges, 4/4/4 ordinary bag, opposite-edge spawn, scheduled 21-move bonus phase, preview window, and rank-based merge reward. Unit tests cover moves, bonus preview/bag behavior, and terminal penalties. | Different PRNG and draw ordering prevent same-seed trajectory identity. Revision 2 passes [10,000 differential transition checks](../results/references/2026-09-26_engine_v2_c_differential.json) against compiled C with shared random draws, including bonus, invalid, timeout, and rank-limit cases. Reset/curriculum initialization is intentionally different. The downloaded agent reached 6,144 in 64/300 games in our simulator, a useful compatibility check rather than proof of identity. |
+| Same episode end? | Natural games end on no legal moves, timeout, or configured tile rank 16 (24,576); evaluation recorded zero timeouts in the first comparison. | The C code has a configurable `can_go_over_65536` flag with confusing names, and its final training setting is unknown. The initial pair bootstrapped timeouts. Revision 2 disables that by default and caches the time limit at the same valid-move boundary as C. |
+| Same reward? | Base condition uses the visible C constants: `0.0625 × merged rank`, invalid move `-0.05`, game-over `-1`, then local clipping to `[-1,1]`. | The C environment also accepts a `reward_scaler`, optional structural/snake terms, and sparse reward mode. Their final settings are unpublished. Revision 2 exposes the scale explicitly; the initial v2 batch keeps it at 1. The completed shaped run also had the corner bug described below. |
+| Same curriculum? | Our engine can scaffold 3–6 larger tiles, and natural-start evaluation disables scaffolding. | Both completed pilots used scaffolding probability **0**. Revision 2 tests probability 0.5, keeps natural-game and curriculum metrics separate, and advances the frontier from natural games only. The author's project describes curriculum training and has a separate endgame-environment option; its schedule, mixture, and final settings are unavailable. Our optional initialization fixes source inconsistencies, so it is not a bitwise port. |
+| Same learning procedure? | Both use recurrent PPO with GAE in broad terms. | The author used **PufferLib**, 4,096 concurrent games in an example, hyperparameter sweeps, and checkpoint resumes with learning-rate reductions. We used **SB3-Contrib**, 128 environments, 64-step rollouts, four epochs, fixed learning rate `0.0003`, and locally chosen PPO settings. Revision 2 adds an absolute-step learning-rate schedule that survives resume; its 5-million-step halving point is a local intervention. The article gives an initial run at learning rate `0.04` in its own implementation; that number should not be copied blindly across optimizers. Final successful settings are not published. |
+
+## A concrete correction found during this audit
+
+The published C corner-shaping rule permits the largest and second-largest tiles to have **equal rank**. In the completed [`recurrent_shaped_s71` source snapshot](../results/runs/2026-09-26_153305_recurrent_shaped_s71/metadata/source/src/reproduction/environment.py), `shaped_reward()` instead selected the largest **distinct** lower rank. When two equal maximum tiles occupied the upper-left positions, this omitted a `+0.01` corner reward. The current [environment implementation](../src/reproduction/environment.py) uses the second entry in the sorted ranks, and a targeted test covers this case.
+
+The empirical 520-point mean for that archived run is still a valid measurement of the **actual code it used**; it cannot be labelled an exact test of the published structural reward. The frequency and effect of this corner mismatch during that training run are unknown. Do not resume that run under current code and treat the result as one continuous reward condition. The base run did not enable structural shaping and is unaffected by this particular correction.
+
+## Audit-stage conclusion (historical reasoning)
+
+The operational research decision is maintained in [current status](CURRENT_STATUS.md). The conclusion below explains the transition to engine v2.
+
+Use the [v2 batch](REPRODUCTION_V2.md) to compare corrected structural reward, curriculum, and learning-rate decay at an equal 10-million-transition budget. It starts new runs and refuses revision-1 continuation under revised rules. Check natural score and tile-384 progress, then replicate across training seeds before scaling. Optional endgame-only and sparse-reward modes remain unimplemented because their use in the released checkpoint is unknown. No performance guarantee follows from the network match or these finite engine checks.

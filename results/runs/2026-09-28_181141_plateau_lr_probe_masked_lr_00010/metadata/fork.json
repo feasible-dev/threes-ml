@@ -1,0 +1,16 @@
+{
+  "group": "2026-09-28_181141_plateau_lr_probe",
+  "arm": "masked_lr_00010",
+  "parent_run": "C:\\dev\\projects\\threes_ml\\results\\runs\\2026-09-27_193437_masked_lr_00010_long_masked_lr_00010",
+  "parent_checkpoint": "C:\\dev\\projects\\threes_ml\\results\\runs\\2026-09-27_193437_masked_lr_00010_long_masked_lr_00010\\models\\checkpoints\\step_000330039296",
+  "parent_steps": 330039296,
+  "parent_model_sha256": "32f40303e885f0e3373d3db9b8e8c627932b586e1e63f36da89266c3118708e3",
+  "parent_runtime_sha256": "56a0f7b2a11054672f6cebf210e37acd383a7cc6f2bb2f06a0771f82c06c4cde",
+  "mask_training": true,
+  "effective_lr": 0.0001,
+  "optimizer_state": "restored without reset",
+  "simulator_and_recurrent_state": "restored; fresh rollouts under the arm distribution",
+  "requested_additional_steps": 10000000,
+  "rounded_additional_steps": 10002432,
+  "started_at": "2026-09-28T18:11:52-04:00"
+}

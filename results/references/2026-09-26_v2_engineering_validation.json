@@ -1,0 +1,20 @@
+{
+  "engine_revision": 2,
+  "unit_tests": {
+    "environment": ".venv",
+    "count": 66,
+    "passed": true
+  },
+  "recurrent_tests": {
+    "environment": ".venv-repro",
+    "count": 13,
+    "passed": true
+  },
+  "test_environment_note": "The full suite needs pygame from the historical .venv; .venv-repro is a headless training environment and does not include pygame.",
+  "gpu_smoke_run": "results\\runs\\2026-09-26_162000_recurrent_v2_gpu_check_s76",
+  "gpu_transitions": 16384,
+  "gpu_resume": true,
+  "learning_rate_after_resume": 0.00015,
+  "c_differential_report": "2026-09-26_engine_v2_c_differential.json",
+  "full_training_launched": false
+}

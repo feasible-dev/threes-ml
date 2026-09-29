@@ -1,0 +1,5 @@
+{
+  "relevance": "high",
+  "retention": "complete",
+  "insight": "A necessary from-scratch control for the published-architecture pipeline. After 2,007,040 transitions, the selected checkpoint averaged 459.41 on 300 shared validation games, reached tile 192 in 5/300 and tile 384 in 0/300. Periodic 100-game validation peaked at 548.61 at 1,531,904 transitions and ended at 410.16; the cumulative training invalid-action rate was 25.10%. The value explained variance was about 0.66 at the end, so the value objective learned some signal while playing strength remained far below the published reference. Keep model, source, and metrics as the paired baseline; do not extrapolate this curve to the publication result."
+}

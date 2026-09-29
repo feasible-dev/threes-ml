@@ -1,0 +1,21 @@
+.venv/
+.venv-repro/
+*.nbc
+*.nbi
+.external/
+external_models/**/*.onnx
+__pycache__/
+*.pyc
+.codex/
+
+# Keep frozen run summaries and provenance; exclude large or changing artifacts.
+results/runs/**/models/
+results/runs/**/data/
+results/runs/**/evaluation/
+results/runs/**/report/
+results/runs/**/metadata/continuations/
+results/runs/**/metadata/terminal.log
+results/**/*.zip
+results/**/*.pt
+results/**/*.jsonl
+results/**/*.html

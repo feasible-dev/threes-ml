@@ -1,0 +1,49 @@
+{
+  "completed_at": "2026-09-26T21:29:45-04:00",
+  "started_at": "2026-09-26T21:19:57-04:00",
+  "moves": {
+    "run_next_experiments.ps1": "scripts/legacy/run_next_experiments.ps1",
+    "docs/TRAVAIL.md": "docs/archive/EARLY_WORK_LOG.md",
+    "docs/prompt_codex_threes.md": "docs/archive/INITIAL_PROPOSAL.md",
+    "docs/RULES_AUDIT.md": "docs/archive/LEGACY_RULES_AUDIT.md",
+    "run_experiments.ps1": "scripts/legacy/run_experiments.ps1",
+    "run_article_experiments.ps1": "scripts/legacy/run_article_experiments.ps1",
+    "docs/EXTERNAL_MODEL_AUDIT.md": "docs/archive/LEGACY_MODEL_COMPATIBILITY.md",
+    "docs/ARTICLE_INSPIRED_EXPERIMENTS.md": "docs/archive/ARTICLE_INSPIRED_EXPERIMENTS.md",
+    "docs/MODELE_ACTUEL.md": "docs/archive/MLP_MODEL.md",
+    "run_reproduction.ps1": "scripts/legacy/run_reproduction.ps1",
+    "docs/AUDIT_CODE.md": "docs/archive/MLP_CODE_AUDIT.md",
+    "docs/NEXT_EXPERIMENTS.md": "docs/archive/PPO_REWARD_EXPERIMENTS.md"
+  },
+  "verified_unchanged": [
+    "src/reproduction/environment.py",
+    "src/reproduction/policy.py",
+    "src/reproduction/training.py",
+    "src/reproduction/evaluation.py",
+    "configs/article_merge_256.json",
+    "configs/article_merge_64.json",
+    "configs/ppo.json",
+    "configs/ppo_200k.json",
+    "configs/ppo_200k_score_survival.json",
+    "configs/ppo_200k_stronger_updates.json",
+    "configs/reproduction_base.json",
+    "configs/reproduction_shaped.json",
+    "configs/reproduction_v2_control.json",
+    "configs/reproduction_v2_curriculum.json",
+    "configs/reproduction_v2_curriculum_decay.json",
+    "configs/reproduction_v2_decay.json",
+    "run_long_reproduction.ps1",
+    "resume_reproduction.ps1",
+    "run_reproduction_v2.ps1"
+  ],
+  "maintained_documents": 27,
+  "verification": [
+    "4 focused unit tests passed",
+    "9 PowerShell scripts parsed",
+    "4 legacy launcher previews passed",
+    "27 maintained documents: metadata and local links valid",
+    "Result Markdown local links checked outside frozen metadata; no missing targets",
+    "Both selected continuation previews report no compatibility issues"
+  ],
+  "scope": "Documentation, launcher organization and reporting. Core training logic, run configs, active batch launchers, model weights and frozen run evidence were not changed by this maintenance."
+}

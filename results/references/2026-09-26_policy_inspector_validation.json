@@ -1,0 +1,17 @@
+{
+  "component": "CPU policy inspector",
+  "date": "2026-09-26",
+  "engine_revision": 2,
+  "unit_tests": {"environment": ".venv", "total": 77, "passed": true, "inspector_specific": 6},
+  "published_model_parity": {
+    "seed": 730010,
+    "transitions": 30,
+    "exact_match": ["legal greedy action", "raw logits", "next LSTM hidden state", "board", "simulator RNG"],
+    "reference": "Direct ONNX inference with persistent memory and NativeBatch transitions"
+  },
+  "cpu_backends_checked": ["published ONNX bytes", "local recurrent PPO checkpoint bytes"],
+  "ui_checks": ["offscreen Pygame rendering visually inspected", "illegal actions omitted", "manual override", "autoplay and slider", "single AI step", "undo restores state and memory", "NPZ export and event log"],
+  "training_files_unchanged": true,
+  "training_launched": false,
+  "limitations": ["No new performance benchmark", "No concepts or causal circuits identified yet", "Interactive desktop launch is left to the user; rendering tested offscreen"]
+}

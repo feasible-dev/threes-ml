@@ -1,0 +1,34 @@
+{
+  "weights_sha256": "63bff54b23de09801fb2bc77ca8856ed781c2abaa2efe896c3da15e5d810eff2",
+  "torch": "2.11.0+cu128",
+  "cuda": true,
+  "gpu": "NVIDIA GeForce RTX 3060",
+  "equivalence": [
+    {
+      "device": "cpu",
+      "sequence_steps": 12,
+      "batch": 3,
+      "max_absolute_errors": {
+        "logits": 4.38690185546875e-05,
+        "value": 1.811981201171875e-05,
+        "hidden": 3.872811794281006e-05,
+        "cell": 3.904849290847778e-05
+      },
+      "parameters": 13995453
+    },
+    {
+      "device": "cuda",
+      "sequence_steps": 12,
+      "batch": 3,
+      "max_absolute_errors": {
+        "logits": 3.886222839355469e-05,
+        "value": 1.0967254638671875e-05,
+        "hidden": 1.445971429347992e-05,
+        "cell": 1.8969178199768066e-05
+      },
+      "parameters": 13995453
+    }
+  ],
+  "native_random_transitions_per_second": 359261.9413721524,
+  "scope": "Engineering validation only: no policy training or performance claim."
+}

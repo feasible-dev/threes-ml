@@ -1,0 +1,31 @@
+{
+  "started_at_local": "2026-09-26T14:28:01-04:00",
+  "git_commit": null,
+  "source_status": "snapshot_saved",
+  "source_directory": "metadata/source",
+  "sha256": {
+    "src/attach_comparison.py": "a4bfb93dfc18a72aee85d6279071ce0aade46b4864f313c3e3a40a96e9c5a48b",
+    "src/compare_agents.py": "57d0baad3816ab6b7a576d7acd1a64f45e59b7f748158146921c6f9fe91f31fe",
+    "src/dashboard.py": "a157a4a1c8a06dcb2941ee18ca7f2c66630074f4aacda0388676db66550fc1c9",
+    "src/evaluate_external.py": "ed32c93a0da14d3a4910e2f76b0ff0523e78969781bc68235308a38b4a54a5ba",
+    "src/evaluate_models.py": "9cdaa627d8f8eeab1185fce57c980931a00e8768407e67341062790867bf1ca6",
+    "src/experiment_catalog.py": "3144a8d38a152b8ec719300c1362d45a0e33627543d1f58754ac06395b6e4936",
+    "src/experiment_config.py": "77009e39a049198090c5977f34be6ff6effaff726ee78b3a2e70b361634e352c",
+    "src/external_agent.py": "edf211633a61b2d3b78a0bd8e7cecfb54e83e465b44814e941721c29bd3b7ca5",
+    "src/gui.py": "ba887b0d716ed88cfdfde1bea330a2e9cdd120f73d0b9cc25f99433f9ebf4d84",
+    "src/main.py": "482f0d8eb2d2eaa01d157a57d71e0999d874ba0cd5515ace4abfd5fbf900535d",
+    "src/observation.py": "a8b745ce4c41028304a512cf58e2ba88889cc61f091b628ca0adb19f7fd581b1",
+    "src/random_agent.py": "70fd70aafef38dac66ed29f00e8a8b66c0d3c588a55ecf11200601dc26135e5e",
+    "src/rewards.py": "1b1567abe8795b4f5383226d9943396ef7e5a54e64cb9a150f0d47f705647325",
+    "src/rl_env.py": "c2ba4679561191021c7eacfb9e5846d4d0cc3b91e2d27cc2555fda722c04ed20",
+    "src/run_layout.py": "919039097c3c4ebfa8eb8ac13ded05a8a49e30fb4a6548bd49296b8439aeb955",
+    "src/run_provenance.py": "627d337d05a9993ec6f4468e96728cfb402c60705cf32f062b5b833c778f5a4c",
+    "src/templates/dashboard.html": "1c6c97ac2c0847e86d46aa298300a34520977ad3590221238427f20a27e403e1",
+    "src/threes.py": "3ff29a6ae7e50ae3593a25ecc713c079f8726a43848b75541b8948bbf9c1532b",
+    "src/train.py": "6fbf92b9c1829e1edf2fd01ca4fc367ac0e126aad017151bee06fbf60f7e75fd",
+    "run_experiments.ps1": "cb7e81c4eebe7c70f916ef24b313e74740090fa3f333fd152fec9fd77da523c1",
+    "run_next_experiments.ps1": "bccca25a8d14692220e2b5f3a74629aa92549743e9a2ddfa488be3f78ba6a730",
+    "requirements.txt": "e7277bb5a0c03f2c4d5759ea2e139901be458794fbd8ff6194352ef9f39aba9d",
+    "requirements-ml.txt": "ca50589520ffab612d1f936bde0997cc3d742476738d7b1aaee9990e1d968c7b"
+  }
+}

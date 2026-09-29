@@ -1,0 +1,15 @@
+{
+  "question": "What does the current PPO setup achieve with training seed 43 under the archived source?",
+  "insight": "Held-out mean 517.7 and tile-192 rate 2.0% over 300 games. This control reproduces the seed-dependent variation seen in the earlier PPO comparison.",
+  "relevance": "medium",
+  "retention": "trim later",
+  "retention_reason": "Keep the final model, source snapshot, metrics, and evaluation; review redundant intermediate checkpoints during cleanup.",
+  "holdout": {
+    "file": "evaluation/holdout.csv",
+    "agent": "2026-09-26_133136_baseline_s43"
+  },
+  "reference": {
+    "file": "evaluation/reference.csv",
+    "agent": "apparition"
+  }
+}

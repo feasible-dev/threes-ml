@@ -1,0 +1,93 @@
+{
+  "measured_at": "2026-09-27T19:29:11-04:00",
+  "group": "2026-09-27_185554_mask_lr_probe",
+  "parent_run": "C:\\dev\\projects\\threes_ml\\results\\runs\\2026-09-27_125618_mask_lr_extension_masked_lr_00005",
+  "parent_steps": 225026048,
+  "endpoint_steps": 230031360,
+  "games": 300,
+  "seed_start": 840000,
+  "seed_end": 840299,
+  "protocol": "Same masked parent and attempted-transition budget; fixed endpoints; paired natural development games",
+  "agents": {
+    "parent_endpoint": {
+      "model": "C:\\dev\\projects\\threes_ml\\results\\runs\\2026-09-27_125618_mask_lr_extension_masked_lr_00005\\models\\checkpoints\\step_000225026048\\model.zip",
+      "games": 300,
+      "mean_score": 6945.69,
+      "median_score": 7411.5,
+      "mean_valid_moves": 246.82666666666665,
+      "mean_attempts": 246.82666666666665,
+      "reach_384": 0.5233333333333333,
+      "reach_3072": 0.0,
+      "reach_6144": 0.0,
+      "truncated": 0
+    },
+    "masked_lr_00005": {
+      "model": "C:\\dev\\projects\\threes_ml\\results\\runs\\2026-09-27_185554_mask_lr_probe_masked_lr_00005\\models\\checkpoints\\step_000230031360\\model.zip",
+      "games": 300,
+      "mean_score": 6819.89,
+      "median_score": 7221.0,
+      "mean_valid_moves": 247.22,
+      "mean_attempts": 247.22,
+      "reach_384": 0.52,
+      "reach_3072": 0.0,
+      "reach_6144": 0.0,
+      "truncated": 0
+    },
+    "masked_lr_00010": {
+      "model": "C:\\dev\\projects\\threes_ml\\results\\runs\\2026-09-27_185554_mask_lr_probe_masked_lr_00010\\models\\checkpoints\\step_000230031360\\model.zip",
+      "games": 300,
+      "mean_score": 5798.95,
+      "median_score": 4057.5,
+      "mean_valid_moves": 220.01333333333332,
+      "mean_attempts": 220.01333333333332,
+      "reach_384": 0.41333333333333333,
+      "reach_3072": 0.0,
+      "reach_6144": 0.0,
+      "truncated": 0
+    }
+  },
+  "paired_comparisons": {
+    "control_vs_parent": {
+      "games": 300,
+      "mean_score_difference": -125.8,
+      "median_paired_difference": -73.5,
+      "wins": 148,
+      "losses": 152,
+      "ties": 0,
+      "paired_bootstrap_95_percentile_interval": [
+        -842.371,
+        583.6619999999998
+      ],
+      "bootstrap_draws": 20000,
+      "bootstrap_seed": 840999
+    },
+    "treatment_vs_parent": {
+      "games": 300,
+      "mean_score_difference": -1146.74,
+      "median_paired_difference": -786.0,
+      "wins": 125,
+      "losses": 175,
+      "ties": 0,
+      "paired_bootstrap_95_percentile_interval": [
+        -1899.2525,
+        -385.67975
+      ],
+      "bootstrap_draws": 20000,
+      "bootstrap_seed": 841000
+    },
+    "lr_00010_minus_00005": {
+      "games": 300,
+      "mean_score_difference": -1020.94,
+      "median_paired_difference": -543.0,
+      "wins": 127,
+      "losses": 172,
+      "ties": 1,
+      "paired_bootstrap_95_percentile_interval": [
+        -1751.1025,
+        -311.1690000000001
+      ],
+      "bootstrap_draws": 20000,
+      "bootstrap_seed": 841001
+    }
+  }
+}

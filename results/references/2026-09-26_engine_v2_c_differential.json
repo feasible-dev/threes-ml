@@ -1,0 +1,20 @@
+{
+  "passed": true,
+  "engine_revision": 2,
+  "cases": 10000,
+  "terminal_cases": 899,
+  "invalid_cases": 546,
+  "bonus_cases": 2325,
+  "rank_limit_cases": 127,
+  "upstream_commit": "9527295de72333c91592fff45e8ccbcabd6ba80d",
+  "header_sha256": "eb6601f1a6bc2b362c1080ecdddeecc46ad28ef33d5033f43939b6510e094cc5",
+  "harness_sha256": "f8d4bed2e649dec6cc9ef2b61c80be95adb626803df63d048d3f99ad5a4f8863",
+  "validator_sha256": "92efe1c7fbac3bdc843f153c0e3f363991932017748d3ef7bda2ca7c46a6621e",
+  "environment_sha256": "c8db1269fa5ef0b4aaec8c998e6ea257aacf58d29bc8c72fac413335e9368ff7",
+  "scope": "One-step and short trajectory parity: board, deck, preview, memory, RNG, reward, termination",
+  "exclusions": [
+    "C reset/curriculum initialization bugs are deliberately not reproduced",
+    "Shared controlled RNG replaces C rand(); identical numeric seeds across engines are not claimed",
+    "Optional endgame-only and sparse-reward modes are not implemented"
+  ]
+}

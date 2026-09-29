@@ -1,0 +1,10 @@
+﻿{
+    "started_at_local":  "2026-09-25T18:35:13-04:00",
+    "git_commit":  null,
+    "source_status":  "historical_source_unavailable",
+    "source_directory":  null,
+    "sha256":  {
+
+               },
+    "note":  "Exact source snapshot and Git commit are unavailable for this historical run. The current source may differ from the training code."
+}

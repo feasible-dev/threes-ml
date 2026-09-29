@@ -1,0 +1,51 @@
+{
+  "schema": "recurrent_mask_lr_fork_v1",
+  "model": {
+    "hidden_size": 1024
+  },
+  "environment": {
+    "heuristic": true,
+    "snake_weight": 0,
+    "scaffold": 0.5,
+    "terminal_rank": 16,
+    "reward_scaler": 1,
+    "bootstrap_timeouts": false
+  },
+  "ppo": {
+    "n_envs": 128,
+    "n_steps": 64,
+    "batch_size": 2048,
+    "n_epochs": 4,
+    "learning_rate": 0.0001,
+    "gamma": 0.999,
+    "gae_lambda": 0.95,
+    "ent_coef": 0.01,
+    "clip_range": 0.2,
+    "vf_coef": 0.5,
+    "max_grad_norm": 0.5,
+    "target_kl": 0.03
+  },
+  "training": {
+    "seed": 72,
+    "steps": 100007936,
+    "device": "cuda",
+    "torch_threads": 1,
+    "checkpoint_interval": 2000000,
+    "lr_schedule": {
+      "milestones": [],
+      "factor": 1.0
+    }
+  },
+  "evaluation": {
+    "games": 100,
+    "seed": 700000,
+    "interval": 500000,
+    "batch_size": 64
+  },
+  "fork": {
+    "arm": "masked_lr_00010",
+    "mask_training": true,
+    "parent_steps": 230031360,
+    "effective_lr": 0.0001
+  }
+}

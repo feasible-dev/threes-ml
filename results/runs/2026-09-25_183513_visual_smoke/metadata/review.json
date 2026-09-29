@@ -1,0 +1,7 @@
+{
+  "question": "Do tracking, saving, and resuming work for a very short run?",
+  "insight": "A technical check over 1,664 transitions; three evaluation games cannot support a performance conclusion.",
+  "relevance": "low",
+  "retention": "trim later",
+  "retention_reason": "Keep the run summary, configuration, and metrics. Review the weights for cleanup after later experiments are checked."
+}

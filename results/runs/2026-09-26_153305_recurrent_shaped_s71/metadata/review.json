@@ -1,0 +1,5 @@
+{
+  "relevance": "high",
+  "retention": "complete",
+  "insight": "Structural-reward pilot paired with base at training seed 71. After 2,007,040 transitions, its selected checkpoint averaged 520.00 on 300 shared validation games, versus 459.41 for base; both reached tile 192 in 5/300 and tile 384 in 0/300. The paired difference of +60.59 had an approximate 95% bootstrap interval of -9.5 to +132.2. A later source audit found that this run omitted the +0.01 corner reward when the two largest tiles had equal rank; its archived source snapshot preserves that actual recipe. The correction is now in current code. Keep the run for interpreting this pilot, but do not continue it under corrected code as one continuous reward condition or describe it as an exact published-shaping test."
+}

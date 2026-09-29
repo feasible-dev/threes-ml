@@ -1,0 +1,7 @@
+{
+  "question": "Are the dashboard, checkpoints, and resume workflow usable on a short run?",
+  "insight": "Tracking worked over 20,224 transitions and 11 evaluations; variation across 20 games prevents a performance conclusion.",
+  "relevance": "medium",
+  "retention": "trim later",
+  "retention_reason": "Keep the configuration, metrics, and report as a tracking example. Decide later whether every intermediate checkpoint is needed."
+}

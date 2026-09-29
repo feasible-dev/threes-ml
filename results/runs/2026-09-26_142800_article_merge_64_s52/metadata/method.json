@@ -1,0 +1,45 @@
+{
+  "method": "MaskablePPO",
+  "policy": "MlpPolicy",
+  "observation": {
+    "dimension": 35,
+    "board_ranks": "16 board cells, tile ranks divided by 15",
+    "next_hint": "16 indicators for possible ranks of the next tile",
+    "bag_remaining": "3 remaining-card counts for tiles 1, 2, and 3, divided by 4"
+  },
+  "action_mask": "4 legal-action indicators supplied separately from the observation",
+  "network": {
+    "policy_hidden": [
+      64,
+      64
+    ],
+    "value_hidden": [
+      64,
+      64
+    ],
+    "activation": "ReLU",
+    "policy_outputs": 4,
+    "value_outputs": 1,
+    "trainable_parameters": 13253
+  },
+  "reward_id": "rank_weighted_merges_v1",
+  "reward": "sum of merged tile levels (3=1, 6=2, 12=3, ...) per legal move; -1 otherwise",
+  "terminal_bonus": 0,
+  "terminal_penalty": 0,
+  "ppo": {
+    "n_steps": 512,
+    "batch_size": 128,
+    "n_epochs": 8,
+    "learning_rate": 0.0003,
+    "gamma": 0.995,
+    "gae_lambda": 0.95,
+    "clip_range": 0.2,
+    "clip_range_vf": null,
+    "normalize_advantage": true,
+    "ent_coef": 0.0,
+    "vf_coef": 0.5,
+    "max_grad_norm": 0.5,
+    "target_kl": null
+  },
+  "device": "cpu"
+}

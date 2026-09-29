@@ -1,0 +1,120 @@
+{
+  "measured_at": "2026-09-28T19:13:24-04:00",
+  "inputs": {
+    "parent_endpoint": {
+      "path": "C:\\dev\\projects\\threes_ml\\results\\runs\\2026-09-27_193437_masked_lr_00010_long_masked_lr_00010\\models\\checkpoints\\step_000330039296\\model.zip",
+      "sha256": "32f40303e885f0e3373d3db9b8e8c627932b586e1e63f36da89266c3118708e3"
+    },
+    "masked_lr_00010": {
+      "path": "C:\\dev\\projects\\threes_ml\\results\\runs\\2026-09-28_181141_plateau_lr_probe_masked_lr_00010\\models\\checkpoints\\step_000340041728\\model.zip",
+      "sha256": "071a455d9029508f8016add45505194f69fcada5b2f7608cad8fd0e2672b4b85"
+    },
+    "masked_lr_00005": {
+      "path": "C:\\dev\\projects\\threes_ml\\results\\runs\\2026-09-28_181141_plateau_lr_probe_masked_lr_00005\\models\\checkpoints\\step_000340041728\\model.zip",
+      "sha256": "d57ecfc4d1234ae1ee86d707cc93fcbf62e5f70adcffc7550960e7fa93cdc10e"
+    }
+  },
+  "metadata": {
+    "group": "2026-09-28_181141_plateau_lr_probe",
+    "parent_run": "C:\\dev\\projects\\threes_ml\\results\\runs\\2026-09-27_193437_masked_lr_00010_long_masked_lr_00010",
+    "parent_steps": 330039296,
+    "endpoint_steps": 340041728,
+    "parent_model_sha256": "32f40303e885f0e3373d3db9b8e8c627932b586e1e63f36da89266c3118708e3",
+    "parent_runtime_sha256": "56a0f7b2a11054672f6cebf210e37acd383a7cc6f2bb2f06a0771f82c06c4cde",
+    "engine_revision": 2
+  },
+  "games": 300,
+  "seed_start": 860000,
+  "seed_end": 860299,
+  "agents": {
+    "parent_endpoint": {
+      "model": "C:\\dev\\projects\\threes_ml\\results\\runs\\2026-09-27_193437_masked_lr_00010_long_masked_lr_00010\\models\\checkpoints\\step_000330039296\\model.zip",
+      "games": 300,
+      "mean_score": 6521.25,
+      "median_score": 7161.0,
+      "mean_valid_moves": 234.41333333333333,
+      "mean_attempts": 234.41333333333333,
+      "reach_384": 0.5166666666666667,
+      "reach_3072": 0.0,
+      "reach_6144": 0.0,
+      "truncated": 0,
+      "reach_192": 0.85,
+      "reach_768": 0.03,
+      "reach_1536": 0.0
+    },
+    "masked_lr_00010": {
+      "model": "C:\\dev\\projects\\threes_ml\\results\\runs\\2026-09-28_181141_plateau_lr_probe_masked_lr_00010\\models\\checkpoints\\step_000340041728\\model.zip",
+      "games": 300,
+      "mean_score": 7512.26,
+      "median_score": 8004.0,
+      "mean_valid_moves": 254.94333333333333,
+      "mean_attempts": 254.94333333333333,
+      "reach_384": 0.6133333333333333,
+      "reach_3072": 0.0,
+      "reach_6144": 0.0,
+      "truncated": 0,
+      "reach_192": 0.89,
+      "reach_768": 0.04666666666666667,
+      "reach_1536": 0.0
+    },
+    "masked_lr_00005": {
+      "model": "C:\\dev\\projects\\threes_ml\\results\\runs\\2026-09-28_181141_plateau_lr_probe_masked_lr_00005\\models\\checkpoints\\step_000340041728\\model.zip",
+      "games": 300,
+      "mean_score": 8287.6,
+      "median_score": 8058.0,
+      "mean_valid_moves": 269.14666666666665,
+      "mean_attempts": 269.14666666666665,
+      "reach_384": 0.6266666666666667,
+      "reach_3072": 0.0,
+      "reach_6144": 0.0,
+      "truncated": 0,
+      "reach_192": 0.9266666666666666,
+      "reach_768": 0.07666666666666666,
+      "reach_1536": 0.0
+    }
+  },
+  "paired_comparisons": {
+    "control_minus_parent": {
+      "games": 300,
+      "mean_score_difference": 991.01,
+      "median_paired_difference": 630.0,
+      "wins": 170,
+      "losses": 130,
+      "ties": 0,
+      "paired_bootstrap_95_percentile_interval": [
+        217.73850000000002,
+        1752.7359999999994
+      ],
+      "bootstrap_draws": 20000,
+      "bootstrap_seed": 860999
+    },
+    "treatment_minus_parent": {
+      "games": 300,
+      "mean_score_difference": 1766.35,
+      "median_paired_difference": 786.0,
+      "wins": 172,
+      "losses": 128,
+      "ties": 0,
+      "paired_bootstrap_95_percentile_interval": [
+        907.9530000000001,
+        2638.683999999999
+      ],
+      "bootstrap_draws": 20000,
+      "bootstrap_seed": 861000
+    },
+    "lr_00005_minus_00010": {
+      "games": 300,
+      "mean_score_difference": 775.34,
+      "median_paired_difference": 459.0,
+      "wins": 165,
+      "losses": 135,
+      "ties": 0,
+      "paired_bootstrap_95_percentile_interval": [
+        -66.39074999999998,
+        1595.9744999999996
+      ],
+      "bootstrap_draws": 20000,
+      "bootstrap_seed": 861001
+    }
+  }
+}

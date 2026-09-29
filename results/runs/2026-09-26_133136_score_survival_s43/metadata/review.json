@@ -1,0 +1,15 @@
+{
+  "question": "Does scaled score gain plus a survival bonus improve seed 43?",
+  "insight": "Held-out mean 367.4, 150.2 points below its control; tile-192 rate falls from 2.0% to 0.3%. Explained variance rises to about 0.25 late in training, showing that easier value prediction alone did not improve the policy.",
+  "relevance": "high",
+  "retention": "trim later",
+  "retention_reason": "Keep the final model and diagnostics for this informative negative result; review intermediate checkpoints during cleanup.",
+  "holdout": {
+    "file": "evaluation/holdout.csv",
+    "agent": "2026-09-26_133136_score_survival_s43"
+  },
+  "reference": {
+    "file": "evaluation/reference.csv",
+    "agent": "apparition"
+  }
+}

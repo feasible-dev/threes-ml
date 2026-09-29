@@ -1,0 +1,5 @@
+{
+  "relevance": "high",
+  "retention": "complete",
+  "insight": "Engineering validation of the full 13,995,453-parameter model on RTX 3060: 16,384 transitions followed by two 8,192-transition checkpoint continuations, finite optimization metrics, about 3,400-3,650 transitions/s including tracking. Separate CPU tests verify exact next-update equality after restoration. Eight-game validation is insufficient for a policy-performance conclusion. Keep as a known working pipeline checkpoint; proceed to the user-launched controlled pilots."
+}

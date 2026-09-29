@@ -1,0 +1,16 @@
+{
+  "group": "2026-09-27_100616_mask_lr",
+  "arm": "unmasked_lr_00015",
+  "parent_run": "C:\\dev\\projects\\threes_ml\\results\\runs\\2026-09-26_162446_recurrent_v2_curriculum_decay_s72",
+  "parent_checkpoint": "C:\\dev\\projects\\threes_ml\\results\\runs\\2026-09-26_162446_recurrent_v2_curriculum_decay_s72\\models\\checkpoints\\step_000100007936",
+  "parent_steps": 100007936,
+  "parent_model_sha256": "8639c10d1e12819087a41f97f2f55441037a6c3b4119640225150d5e676e0285",
+  "parent_runtime_sha256": "2218e933e8fddd590654b97e192c4db5fa9cdc65adfaf3e587fa51cea800cb76",
+  "mask_training": false,
+  "effective_lr": 0.00015,
+  "optimizer_state": "restored without reset",
+  "simulator_and_recurrent_state": "restored; fresh rollouts under the arm distribution",
+  "requested_additional_steps": 5000000,
+  "rounded_additional_steps": 5005312,
+  "started_at": "2026-09-27T10:06:17-04:00"
+}

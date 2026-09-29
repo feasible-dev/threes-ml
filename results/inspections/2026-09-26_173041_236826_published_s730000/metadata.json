@@ -1,0 +1,17 @@
+{
+  "started_at": "2026-09-26T17:30:41.236826-04:00",
+  "model": "C:\\dev\\projects\\threes_ml\\external_models\\kiok\\onnx_model.onnx",
+  "model_sha256": "63bff54b23de09801fb2bc77ca8856ed781c2abaa2efe896c3da15e5d810eff2",
+  "engine_revision": 2,
+  "device": "cpu",
+  "initial_seed": 730000,
+  "environment_sha256": "c8db1269fa5ef0b4aaec8c998e6ea257aacf58d29bc8c72fac413335e9368ff7",
+  "action_order": [
+    "Up",
+    "Down",
+    "Left",
+    "Right"
+  ],
+  "purpose": "interactive inspection; not a performance benchmark",
+  "display": "raw actor logits and softmax conditional on legal actions; value head is a global reward estimate"
+}

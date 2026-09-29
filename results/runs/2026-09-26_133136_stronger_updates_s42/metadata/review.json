@@ -1,0 +1,15 @@
+{
+  "question": "Do larger rollouts and more PPO passes improve seed 42 at the same transition budget?",
+  "insight": "Held-out mean 496.6, 35.8 points above its seed-matched control; tile-192 rate remains 1.3%. The gain is modest and uncertain at two training seeds. Best periodic mean 639.1 exceeds the final periodic mean 489.6.",
+  "relevance": "high",
+  "retention": "complete",
+  "retention_reason": "Keep the final model and the best periodic checkpoint, metrics, configuration, and source snapshot for a controlled follow-up.",
+  "holdout": {
+    "file": "evaluation/holdout.csv",
+    "agent": "2026-09-26_133136_stronger_updates_s42"
+  },
+  "reference": {
+    "file": "evaluation/reference.csv",
+    "agent": "apparition"
+  }
+}
