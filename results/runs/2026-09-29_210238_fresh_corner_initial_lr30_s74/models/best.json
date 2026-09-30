@@ -1,0 +1,11 @@
+{
+  "steps": 89391104,
+  "eval_mean": 4201.35,
+  "eval_median": 3348.0,
+  "eval_max": 11499,
+  "eval_games": 100,
+  "eval_384": 0.32,
+  "eval_3072": 0.0,
+  "eval_6144": 0.0,
+  "eval_truncated": 0
+}

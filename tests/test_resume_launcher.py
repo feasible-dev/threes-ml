@@ -64,7 +64,7 @@ class ResumeLauncherTests(unittest.TestCase):
         displayed = resume.format_validation_line(self.run, original)
         self.assertEqual(displayed,
                          "           8 steps | 2,500 steps/s | Vloss 0.123 | validation 1,200.0 "
-                         "| >=192 100.0% | >=384 75.0% | >=768 75.0%\n")
+                         "| >=192 100.0% | >=384 75.0% | >=768 75.0% | >=1536 50.0%\n")
         routine = "          16 steps | 2,600 steps/s | Vloss 0.120\n"
         self.assertEqual(resume.format_validation_line(self.run, routine), routine)
 

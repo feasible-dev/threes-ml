@@ -1,0 +1,8 @@
+{
+  "stopped_at": "2026-09-29T21:12:44-04:00",
+  "reason": "User requested interruption to restore >=192, >=384, >=768 and >=1536 validation trace",
+  "saved_steps": 2015232,
+  "checkpoint": "C:\\dev\\projects\\threes_ml\\results\\runs\\2026-09-29_210238_fresh_corner_initial_lr30_s74\\models\\checkpoints\\step_000002015232",
+  "stopping_method": "Stopped the verified Python worker after confirming a complete checkpoint",
+  "original_target_steps": 100007936
+}

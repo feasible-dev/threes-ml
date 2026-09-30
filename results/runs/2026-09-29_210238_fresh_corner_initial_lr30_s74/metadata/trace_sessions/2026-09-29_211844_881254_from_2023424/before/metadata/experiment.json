@@ -1,0 +1,16 @@
+{
+  "experiment": "fresh_masked_initial_lr_corner_v1",
+  "reward": {
+    "type": "largest_tile_edge_corner_potential_v1",
+    "corner_weight": 0.1,
+    "side_weight": 0.025,
+    "discount": 0.999,
+    "min_rank": 5,
+    "min_tile": 12
+  },
+  "mask_training": true,
+  "initialization": "random weights",
+  "target_steps": 100007936,
+  "requested_steps": 100000000,
+  "created_at": "2026-09-29T21:02:38-04:00"
+}

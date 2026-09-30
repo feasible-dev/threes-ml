@@ -1,0 +1,14 @@
+{
+  "created_at": "2026-09-29T21:18:44-04:00",
+  "purpose": "Preserve pre-resume evidence and restore four-threshold terminal trace",
+  "parent_checkpoint": "C:\\dev\\projects\\threes_ml\\results\\runs\\2026-09-29_210238_fresh_corner_initial_lr30_s74\\models\\checkpoints\\step_000002023424",
+  "saved_steps": 2023424,
+  "target_steps": 100007936,
+  "method_change": false,
+  "trace_thresholds": [
+    192,
+    384,
+    768,
+    1536
+  ]
+}
